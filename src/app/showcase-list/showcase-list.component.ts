@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-showcase-list',
@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./showcase-list.component.scss']
 })
 export class ShowcaseListComponent {
- isLoggedIn: boolean = true;
- token: string = ''
- marks = [10,20,30,15,23,45,60,80]
- users = [
+
+  
+  @Input() showAboutShowcase: boolean = false;
+  
+  showShowcaseList:boolean = true
+ 
+ 
+  users = [
   {
     username: 'Jane',
     age: 18,

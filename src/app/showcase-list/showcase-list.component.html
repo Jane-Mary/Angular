@@ -1,23 +1,17 @@
 <!-- ngIf Directive-->
-<h1>Showcase List - Structural Directives</h1>
-<div class="content-section" *ngIf="token.length > 1 ? true:false">
+<div class="content-section" *ngIf="showAboutShowcase">
+    <h1>About Showcase List</h1>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Dolore velit molestias quasi sunt? Quo eveniet molestiae 
-         blanditiis quas eos commodi temporibus aspernatur magni
-          officiis harum a, dicta doloribus atque rerum.
+        Dolore velit molestias quasi sunt? Quo eveniet molestiae
+        blanditiis quas eos commodi temporibus aspernatur magni
+        officiis harum a, dicta doloribus atque rerum.
     </p>
 </div>
-
-<!-- ngFor Directive -->
-<div class="list-section">
-
-    <!-- display all the marks -->
-    <div class="marks-container" *ngFor="let mark of marks">
-        <p>Marks =  {{mark}}</p>
-    </div>
-
+<!--ngFor Directive -->
+<div *ngIf="showShowcaseList" class="list-section">
     <!-- List of users-->
+    <h1>Showcase - User List</h1>
     <div class="user-container">
         <div class="user-item" *ngFor="let user of users">
             <p>Username : {{user.username}}</p>
@@ -26,8 +20,5 @@
             <p>Profession : {{user.profession}}</p>
         </div>
 
-
-        
     </div>
 </div>
-
