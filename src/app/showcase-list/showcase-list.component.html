@@ -9,8 +9,25 @@
     </p>
 </div>
 
+<!-- ngFor Directive -->
 <div class="list-section">
 
+    <!-- display all the marks -->
+    <div class="marks-container" *ngFor="let mark of marks">
+        <p>Marks =  {{mark}}</p>
+    </div>
+
+    <!-- List of users-->
+    <div class="user-container">
+        <div class="user-item" *ngFor="let user of users">
+            <p>Username : {{user.username}}</p>
+            <p>Age : {{user.age}}</p>
+            <p>Gender : {{user.gender}}</p>
+            <p>Profession : {{user.profession}}</p>
+        </div>
+
+
+        
+    </div>
 </div>
 
-<!-- read ngFor -->
